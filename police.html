@@ -1,0 +1,238 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nova RP Police Handbook</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f5f4fa; --paper:#ffffff; --ink:#1c1930; --ink-2:#4d4866; --ink-3:#7b7695; --line:#dcd9e8; --line-2:#ebe9f3;
+  --accent:#8b2fe2; --accent-soft:#efe4fb;
+  --pd:#2d5fd6; --pd-soft:#e3eafb; --ems:#d63a4a; --ems-soft:#fbe3e6; --doj:#b8860b; --doj-soft:#f8efd4;
+  --kbd-bg:#ffffff; --kbd-line:#c9c5d9; --code-bg:#eeecf5;
+  --warn-bg:#fff5e0; --warn-line:#e2b95a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141220; --paper:#1c1929; --ink:#ece9f6; --ink-2:#b6b1cc; --ink-3:#847f9c; --line:#2f2b42; --line-2:#262236;
+    --accent:#b07cf0; --accent-soft:#2b2140;
+    --pd:#6e95f0; --pd-soft:#1d2540; --ems:#f06a78; --ems-soft:#3a1e24; --doj:#e0b24a; --doj-soft:#3a3018;
+    --kbd-bg:#262236; --kbd-line:#4a4562; --code-bg:#262236;
+    --warn-bg:#332a14; --warn-line:#8a6b1f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141220; --paper:#1c1929; --ink:#ece9f6; --ink-2:#b6b1cc; --ink-3:#847f9c; --line:#2f2b42; --line-2:#262236;
+  --accent:#b07cf0; --accent-soft:#2b2140;
+  --pd:#6e95f0; --pd-soft:#1d2540; --ems:#f06a78; --ems-soft:#3a1e24; --doj:#e0b24a; --doj-soft:#3a3018;
+  --kbd-bg:#262236; --kbd-line:#4a4562; --code-bg:#262236;
+  --warn-bg:#332a14; --warn-line:#8a6b1f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:var(--accent)}
+.wrap{display:grid;grid-template-columns:230px minmax(0,1fr);gap:40px;max-width:1180px;margin:0 auto;padding:32px 24px 80px}
+@media (max-width:860px){.wrap{grid-template-columns:1fr;gap:24px}.toc{position:static!important}}
+.toc{position:sticky;top:20px;align-self:start;font-size:14px}
+.toc .brand{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase;line-height:1;margin:0 0 4px}
+.toc .brand span{color:var(--accent)}
+.toc .sub{color:var(--ink-3);font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 18px}
+.toc ul{list-style:none;margin:0;padding:0}
+.toc li{margin:0}
+.toc a{display:block;color:var(--ink-2);text-decoration:none;padding:5px 0 5px 12px;border-left:2px solid var(--line)}
+.toc a:hover,.toc a:focus{color:var(--ink);border-left-color:var(--accent);outline:none}
+.toc .grp{margin-top:14px;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding-left:12px}
+.toc .grp.pd{color:var(--pd)}.toc .grp.ems{color:var(--ems)}.toc .grp.doj{color:var(--doj)}
+main{min-width:0}
+header.cover{border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:34px}
+.eyebrow{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:56px;line-height:.95;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance}
+.lede{font-size:19px;color:var(--ink-2);max-width:62ch;margin:0}
+.dept-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tag{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:13px;padding:4px 10px;border-radius:3px}
+.tag.pd{background:var(--pd-soft);color:var(--pd)}.tag.ems{background:var(--ems-soft);color:var(--ems)}.tag.doj{background:var(--doj-soft);color:var(--doj)}.tag.all{background:var(--accent-soft);color:var(--accent)}
+section{margin:0 0 54px}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:34px;line-height:1;letter-spacing:.01em;text-transform:uppercase;margin:0 0 6px;padding-top:10px;border-top:3px solid var(--ink);display:flex;align-items:baseline;gap:12px}
+h2 .k{font-size:15px;letter-spacing:.14em;color:var(--ink-3);font-weight:600}
+section.pd h2{border-top-color:var(--pd)}section.ems h2{border-top-color:var(--ems)}section.doj h2{border-top-color:var(--doj)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:22px;letter-spacing:.03em;text-transform:uppercase;margin:28px 0 8px;color:var(--ink)}
+p{margin:0 0 12px;max-width:70ch}
+ul.plain{margin:0 0 12px;padding-left:20px;max-width:70ch}
+ul.plain li{margin:0 0 5px}
+kbd{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;font-weight:500;background:var(--kbd-bg);border:1px solid var(--kbd-line);border-bottom-width:2px;border-radius:4px;padding:1px 6px;color:var(--ink);white-space:nowrap}
+code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:14px;background:var(--code-bg);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.tbl-wrap{overflow-x:auto;margin:0 0 16px}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--ink-3);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line-2);vertical-align:top}
+td:first-child{white-space:nowrap}
+td.num,th.num{font-variant-numeric:tabular-nums;text-align:right}
+ol.sop{counter-reset:s;list-style:none;margin:0 0 16px;padding:0;max-width:72ch}
+ol.sop li{counter-increment:s;position:relative;padding:8px 0 8px 46px;border-bottom:1px solid var(--line-2)}
+ol.sop li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums}
+section.pd ol.sop li::before{color:var(--pd)}section.ems ol.sop li::before{color:var(--ems)}section.doj ol.sop li::before{color:var(--doj)}
+ol.sop b{font-weight:600}
+.callout{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:4px;padding:12px 16px;margin:0 0 16px;max-width:72ch;font-size:15.5px}
+.callout b{font-weight:700}
+.note{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:12px 16px;margin:0 0 16px;max-width:72ch;font-size:15.5px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:0 0 16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:14px 16px}
+.card h4{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:17px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;color:var(--ink-2)}
+.card p,.card ul{font-size:15px;margin:0}
+.card ul{padding-left:18px}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.ladder span{font-size:13.5px;background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:3px 8px;font-variant-numeric:tabular-nums}
+.ladder span.boss{border-color:var(--doj);color:var(--doj)}
+footer{border-top:1px solid var(--line);padding-top:16px;color:var(--ink-3);font-size:13.5px}
+@media print{.toc{display:none}.wrap{grid-template-columns:1fr;padding:0}body{background:#fff;color:#111}section{break-inside:avoid-page}}
+</style></head><body>
+<div class="wrap">
+<nav class="toc" aria-label="Contents">
+  <p class="brand">NOVA <span>RP</span></p>
+  <p class="sub">Police Handbook · Sept 2026</p>
+  <ul><li><a href="#basics">The basics</a></li><li><a href="#keys">Keys &amp; commands</a></li><li><a href="#dispatch">Dispatch &amp; the tablet</a></li><li><a href="#pd-shift">Starting a shift</a></li><li><a href="#pd-tools">Street tools</a></li><li><a href="#pd-sop">SOPs</a></li><li><a href="#pd-ranks">Ranks &amp; MDT rights</a></li><li><a href="#codes">Codes &amp; channels</a></li><li><a href="#trouble">When something breaks</a></li></ul>
+</nav>
+<main>
+<header class="cover">
+  <p class="eyebrow">Nova RP · LSPD · BCSO · SASP</p>
+  <h1>Police Handbook &amp; Standard Operating Procedures</h1>
+  <p class="lede">Clocking in, gearing up, dispatch, street tools, arrests, pursuits, reports and the rank ladder — written for the way Nova is built today.</p>
+  <div class="dept-row"><span class="tag pd">LSPD · BCSO · SASP</span></div>
+</header>
+<section id="basics">
+  <h2>Everyone: the basics <span class="k">All departments</span></h2>
+  <p>Three things run every department on Nova: <b>duty</b>, the <b>third eye</b>, and the <b>tablet</b>. Learn these first and the rest of the handbook is detail.</p>
+  <div class="grid2">
+    <div class="card"><h4>Duty</h4><p>Nothing works until you clock in. Press <kbd>F9</kbd> (or type <code>/duty</code>) anywhere, use the duty point at your station, or the radial menu's <i>Toggle Duty</i>. Off duty you get no dispatch calls, no officer blips, no MDT roster entry and no department tools — that is deliberate, so clock out when you go civilian.</p></div>
+    <div class="card"><h4>Third eye</h4><p>Hold <kbd>Left Alt</kbd> and look at a person, vehicle or object. Every department action — cuff, search, revive, stretcher, repair — is an option on the thing you are looking at, and only shows while you are on duty. If an option is missing, you are off duty or too far away.</p></div>
+    <div class="card"><h4>Tablet</h4><p><kbd>F2</kbd> opens the tablet. The Police and Ambulance apps are your MDT: dispatch board, reports, cases, warrants, units, bulletins. Work apps only unlock on duty. <kbd>Left Alt</kbd> toggles the cursor while it is open.</p></div>
+    <div class="card"><h4>Your ID is the PermID</h4><p>When staff or a form asks for an ID, that means the <b>permanent ID</b> (the <code>#</code> number on the HUD). The only places that still take the short session number are the DOJ inmate tools and <code>/jail</code> — those say so.</p></div>
+  </div>
+  <p>Voice is proximity based with three ranges (whisper / normal / shout — cycle with the voice range key; the current range shows on the HUD). Use a <b>radio</b> item for department comms: use it from your inventory (<kbd>`</kbd>), join a channel, then hold the radio push-to-talk key. Channels 1–10 are police, EMS should sit on one agreed channel; see <a href="#codes">codes &amp; channels</a>.</p>
+</section><section id="keys">
+  <h2>Keys &amp; commands <span class="k">Quick reference</span></h2>
+  <div class="tbl-wrap"><table><tr><th>Key</th><th>What it does</th><th>Who</th></tr><tr><td><kbd>F9</kbd> / <code>/duty</code></td><td>Clock in or out</td><td>PD, EMS</td></tr><tr><td><kbd>F2</kbd></td><td>Tablet (MDT, dispatch, reports)</td><td>PD, EMS, DOJ</td></tr><tr><td><kbd>Left Alt</kbd></td><td>Third eye — all interactions on players, vehicles, objects</td><td>All</td></tr><tr><td><kbd>E</kbd> on a person</td><td>Interaction wheel (ID, frisk, like, put in vehicle…)</td><td>All</td></tr><tr><td><kbd>G</kbd> while sprinting</td><td>Tackle the suspect in front of you</td><td>PD</td></tr><tr><td><kbd>F6</kbd></td><td>Release an escort / universal cancel</td><td>All</td></tr><tr><td><kbd>E</kbd> near a spike strip</td><td>Pick the strip back up</td><td>PD</td></tr><tr><td><kbd>O</kbd> <kbd>G</kbd> <kbd>Z</kbd> <kbd>J</kbd></td><td>Dispatch popup: dismiss · view in tablet · respond · expand (<kbd>↑</kbd><kbd>↓</kbd> to move between calls)</td><td>PD, EMS</td></tr><tr><td><kbd>`</kbd></td><td>Inventory</td><td>All</td></tr><tr><td><kbd>K</kbd></td><td>Phone</td><td>All</td></tr><tr><td><kbd>F5</kbd></td><td>Open a staff ticket</td><td>All</td></tr><tr><td><code>/bill &lt;amount&gt; [reason]</code></td><td>Issue a fine or bill to the nearest person (lands in their bank Fines tab)</td><td>PD (and lawyers)</td></tr><tr><td><code>/911 &lt;message&gt;</code></td><td>Civilians calling for help</td><td>All</td></tr></table></div>
+  <p>Every key above is a FiveM key mapping, so if one clashes with something you already use, rebind it under <i>Settings → Key Bindings → FiveM</i>. Existing players keep their old binding until they change it.</p>
+</section><section id="dispatch">
+  <h2>Dispatch &amp; the tablet <span class="k">PD + EMS</span></h2>
+  <p>Calls arrive as a popup on the right of the screen and on the tablet's dispatch board. Only on-duty members of the job the call is for receive it. A call stays on the board for its timer (five minutes for a gunshot or a person down) and then expires on its own.</p>
+  <h3>Where calls come from</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Call</th><th>Code</th><th>Triggered by</th><th>Goes to</th></tr>
+    <tr><td>Gunshot</td><td>10-31</td><td>Any non-police player firing a weapon (no witness needed)</td><td>PD + EMS</td></tr>
+    <tr><td>Armed person</td><td>—</td><td>A weapon drawn in public</td><td>PD</td></tr>
+    <tr><td>Carjacking / vehicle theft</td><td>—</td><td>Taking a vehicle from a ped / breaking into a car</td><td>PD</td></tr>
+    <tr><td>Explosion</td><td>—</td><td>Grenades, launchers, car blasts</td><td>PD + EMS</td></tr>
+    <tr><td>Person down</td><td>10-52</td><td>A player entering last stand</td><td>EMS</td></tr>
+    <tr><td>Person deceased</td><td>10-79</td><td>A player fully dying</td><td>EMS</td></tr>
+    <tr><td>Prison break</td><td>10-99</td><td>An inmate starting a breakout</td><td>PD</td></tr>
+    <tr><td>911</td><td>—</td><td><code>/911</code> from a civilian</td><td>PD / EMS</td></tr>
+  </table></div>
+  <h3>Handling a call</h3>
+  <ol class="sop">
+    <li><b>Acknowledge.</b> Press <kbd>Z</kbd> on the popup (or Respond on the board). Your unit shows as responding so others can cover elsewhere.</li>
+    <li><b>Navigate.</b> Every call carries a location and a map blip. <kbd>G</kbd> opens it in the tablet if you need the description again.</li>
+    <li><b>Call it on radio.</b> "Unit 2-1 en route to the 10-31 at Lake Vinewood." Say what you see on arrival before you act.</li>
+    <li><b>Close it.</b> Dismiss (<kbd>O</kbd>) once handled so the board reflects reality. Sergeants and above can delete stale calls.</li>
+  </ol>
+  <p>Shots fired <i>by</i> an on-duty officer never create a call — the system ignores police-caused gunfire on purpose, so do not expect your own warning shots to page backup.</p>
+</section><section class="pd" id="pd-shift">
+  <h2>Police: starting a shift <span class="k">LSPD · BCSO · SASP</span></h2>
+  <ol class="sop">
+    <li><b>Clock in.</b> <kbd>F9</kbd>, or walk onto the duty stand inside Mission Row (just past the front desk) or the Paleto station. The tablet's unit list and your officer blip go live.</li>
+    <li><b>Gear up at the armoury</b> (Mission Row, back office — third eye the counter). Everything is bought with department funds at cost:
+      <div class="tbl-wrap"><table>
+        <tr><th>Item</th><th class="num">Price</th><th>Notes</th></tr>
+        <tr><td>Handcuffs</td><td class="num">$50</td><td>Required to cuff. Buy one, keep it.</td></tr>
+        <tr><td>Spike strip</td><td class="num">$150</td><td>Deployable; returned to you on pick-up.</td></tr>
+        <tr><td>Nightstick / Flashlight</td><td class="num">$100 / $200</td><td>Always allowed on your belt.</td></tr>
+        <tr><td>Stun gun</td><td class="num">$500</td><td>Registered, serial POL.</td></tr>
+        <tr><td>Pistol</td><td class="num">$500</td><td>Registered, serial POL. Needs your weapon licence.</td></tr>
+        <tr><td>Carbine rifle</td><td class="num">$1,000</td><td>Open to every grade. Registered, serial POL.</td></tr>
+        <tr><td>Pistol / rifle ammo</td><td class="num">$5</td><td>Generic by class — one pistol box fits every pistol.</td></tr>
+      </table></div>
+      Department weapons are logged with a POL serial: if one turns up on a civilian, the MDT weapon register tells you whose it was.</li>
+    <li><b>Pull a car.</b> Three LSPD garages: the station garage (inside the Mission Row lot) and two more along the east side of the building. Cruiser, Buffalo and the <b>Police Atlantis</b> are available to every grade; the garage menu lets you pick livery and extras before it spawns. Return the car to the same garage when you clock off — abandoned units get towed at your cost.</li>
+    <li><b>Check the board.</b> Open <kbd>F2</kbd> → Police → Dispatch and Bulletins. Read the pinned bulletins: BOLOs, active warrants and the shift's assignments live there.</li>
+    <li><b>Radio in.</b> Join the dispatch channel (1) and announce yourself with your callsign. Move to a tac channel (2–10) for a scene.</li>
+  </ol>
+  <div class="note"><b>Other station points (Mission Row):</b> fingerprint scanner in the cells corridor, impound lot at the side entrance, helipad on the roof, evidence lockers are ox stashes at the station, and the paperwork trash by the duty stand for anything you want gone.</div>
+</section><section class="pd" id="pd-tools">
+  <h2>Police: street tools <span class="k">Third eye on a person</span></h2>
+  <p>Hold <kbd>Left Alt</kbd> and look at the suspect. These options appear only while you are on duty and within about 2.5 m:</p>
+  <div class="tbl-wrap"><table>
+    <tr><th>Option</th><th>What happens</th><th>Rules</th></tr>
+    <tr><td>Cuff / Uncuff</td><td>4-second restrain animation, suspect is cuffed (or freed if already cuffed).</td><td>Needs handcuffs in your inventory. Not from inside a vehicle.</td></tr>
+    <tr><td>Search</td><td>Opens the suspect's inventory so you can seize items.</td><td>Police can search anyone in reach. Civilians can only search someone cuffed or down.</td></tr>
+    <tr><td>Escort</td><td>The cuffed suspect walks with you.</td><td>Only shown when they are cuffed. <kbd>F6</kbd> releases.</td></tr>
+    <tr><td>Put In Vehicle</td><td>Seats them in the nearest car — rear seats only, never the front.</td><td>Two-seaters are refused.</td></tr>
+    <tr><td>Remove From Vehicle</td><td>Pulls them out.</td><td>—</td></tr>
+    <tr><td>ID Check</td><td>Shows their permanent ID, name, join date and play hours.</td><td>Use it to write the correct ID on reports.</td></tr>
+    <tr><td>Send to Prison</td><td>Prompts for a sentence in minutes (1–240) and jails them at Bolingbroke.</td><td>Charges go in the MDT first — see the arrest SOP.</td></tr>
+  </table></div>
+  <h3>Other tools</h3>
+  <div class="grid2">
+    <div class="card"><h4>Tackle — <kbd>G</kbd></h4><p>Sprint at a fleeing suspect and press <kbd>G</kbd> within about two metres, roughly facing them. You dive, they go down for three seconds. Three-second cooldown; only works on foot and only for LEO jobs.</p></div>
+    <div class="card"><h4>Spike strips</h4><p>Use the <i>Spike Strip</i> item on foot: you kneel and lay it two metres ahead. Any tyre that crosses it bursts. Walk up and press <kbd>E</kbd> to pick it up — you get the item back. Server-wide limit of five deployed at once.</p></div>
+    <div class="card"><h4>Fines — <code>/bill</code></h4><p><code>/bill 750 Reckless driving</code> bills the nearest person; it appears in their bank's Fines tab and they pay when they can. Max $100,000, must be within 8 m. Use the MDT case with charges for anything that also carries jail time.</p></div>
+    <div class="card"><h4>Speed radars</h4><p>Station radars fine automatically: $25 up to 10 over, $50 up to 30 over, $250 up to 80 over, $500 beyond that.</p></div>
+    <div class="card"><h4>Objects</h4><p>Cones, barriers, road signs, tents, lights and a table can be placed from the police menu for a scene; remove them with the same menu when you leave.</p></div>
+    <div class="card"><h4>Impound</h4><p>Third eye a vehicle for the impound options, or drive it to the lot at the side of Mission Row. Choose a hold time; owners release it from the impound with the fee going to the police fund.</p></div>
+  </div>
+  <div class="callout"><b>Prison facts you should tell the suspect.</b> Sentences are in real minutes. Inmates can shorten their time by working out, cleaning and kitchen duty inside, and can shop at the commissary. Anyone who digs out (a shovel is involved) triggers a <b>10-99</b> to every on-duty unit with a blip on the prison — the breakout is a real pursuit.</div>
+</section><section class="pd" id="pd-sop">
+  <h2>Police: standard operating procedures <span class="k">Follow in order</span></h2>
+  <h3>Traffic stop</h3>
+  <ol class="sop">
+    <li><b>Call it.</b> Radio the plate, vehicle and location before lights go on. Wait for a second unit on a stop with more than two occupants.</li>
+    <li><b>Position.</b> Park offset behind the vehicle, lights on. Approach on the passenger side at night.</li>
+    <li><b>Identify.</b> Ask for licence and reason for the stop, then <i>ID Check</i> them through the third eye so the name on the report is right.</li>
+    <li><b>Decide.</b> Warning, <code>/bill</code> for an infraction, or arrest for a misdemeanour/felony. Speeding alone is a fine, never a cell.</li>
+    <li><b>Clear.</b> "Unit clear, resuming patrol" on radio, dismiss any linked dispatch.</li>
+  </ol>
+  <h3>Arrest</h3>
+  <ol class="sop">
+    <li><b>Control first.</b> Suspect stops or is tackled → <i>Cuff</i>. Say the reason for the arrest out loud; that line is what the DOJ will ask about later.</li>
+    <li><b>Search.</b> Third eye → <i>Search</i>. Seize contraband and unregistered weapons into your inventory or an evidence locker; leave personal items alone unless they are evidence.</li>
+    <li><b>Transport.</b> <i>Escort</i> to the car, <i>Put In Vehicle</i> (they go in the back), drive to Mission Row. Read them their rights on the way — the right to a DOJ lawyer is real here.</li>
+    <li><b>Book them in the MDT.</b> <kbd>F2</kbd> → Police → Profiles → their name → new <b>Report</b> with the charges. Officer I and up can write reports; Senior Patrol Officer (grade 3) and up create cases and warrants. Attach the seized-item list and a mugshot if you took one.</li>
+    <li><b>Sentence.</b> Total the charges. Guideline: infraction 0 min (fine only), misdemeanour 10–30 min, felony 30–90 min, capital 90–240 min. Stack charges but stay under 240 unless a Lieutenant signs off.</li>
+    <li><b>Jail.</b> Third eye → <i>Send to Prison</i>, enter the minutes. The suspect keeps their phone and can call a lawyer from inside; DOJ can bail or reduce, so the report must be complete before they go in.</li>
+  </ol>
+  <h3>Use of force ladder</h3>
+  <p>Presence → verbal → tackle or stun gun → nightstick → firearm. Move up only when the step below fails or the suspect is armed. Shots at a fleeing unarmed suspect are a staff ticket against <i>you</i>. Never fire from a moving vehicle at another moving vehicle unless being fired upon.</p>
+  <h3>Pursuits</h3>
+  <ol class="sop">
+    <li><b>Primary unit calls the pursuit</b>: direction, vehicle, speed, reason. Secondary units call in as they join; no more than three units unless a Sergeant authorises.</li>
+    <li><b>Spike ahead, not behind.</b> A unit gets ahead on the radio-called route and lays a strip; every other unit backs off so the suspect drives into it.</li>
+    <li><b>PIT only under 60 mph</b> and only when a Sergeant or above is in the pursuit. Air unit (helipad on the roof) takes over calling once it is up.</li>
+    <li><b>Terminate</b> when the danger to the public exceeds the offence: dense traffic, oncoming lanes, off-road you cannot follow. Say "terminating" — the tablet warrant does the rest.</li>
+  </ol>
+  <h3>Reports and evidence</h3>
+  <p>A report per incident, a case per investigation, a warrant per person you want held. Reports carry the officer, the civilians and the suspects involved so the DOJ can read the whole story. Bulletins are for the department: BOLOs, shift notes, roster changes. Evidence you seize and want kept goes into an evidence stash at the station with a note in the report of which slot.</p>
+</section><section class="pd" id="pd-ranks">
+  <h2>Police: ranks &amp; MDT rights <span class="k">LSPD ladder</span></h2>
+  <div class="ladder">
+    <span>0 Cadet</span><span>1 Officer I</span><span>2 Officer II</span><span>3 Senior Patrol Officer</span><span>4 Master Officer</span><span>5 Corporal</span><span>6 Sergeant</span><span>7 Staff Sergeant</span><span>8 Master Sergeant</span><span class="boss">9 Lieutenant</span><span class="boss">10 Captain</span><span class="boss">11 Major</span><span class="boss">12 Commander</span><span class="boss">13 Deputy Chief</span><span class="boss">14 Assistant Chief</span><span class="boss">15 Chief of Police</span><span class="boss">16 Commissioner</span><span class="boss">17 Boss</span>
+  </div>
+  <p>BCSO and SASP run a five-step ladder (Recruit, Officer, Sergeant, Lieutenant, Chief) with the same tools. Lieutenant and above hold boss and bank access — hiring, promotions and the society account through the boss menu. Rank headcounts are capped per grade, so a promotion may have to wait for a seat.</p>
+  <div class="tbl-wrap"><table>
+    <tr><th>MDT action</th><th>Minimum grade</th></tr>
+    <tr><td>View profiles, vehicles, weapons, reports, cases, warrants, dispatch</td><td>0 — everyone on duty</td></tr>
+    <tr><td>Issue a fine from a case; listen to a wiretap; phone call history</td><td>1 — Officer I</td></tr>
+    <tr><td>Triangulate or unlock a phone; create a wiretap; evidence stash</td><td>2 — Officer II</td></tr>
+    <tr><td>Create / edit / delete reports, cases, warrants, offences; edit profiles &amp; vehicles; register weapons; jail &amp; unjail from the MDT; manage units; pin bulletins; delete dispatch calls; view logs</td><td>3 — Senior Patrol Officer</td></tr>
+  </table></div>
+</section><section id="codes">
+  <h2>Codes &amp; channels <span class="k">Reference</span></h2>
+  <div class="grid2">
+    <div class="card"><h4>Radio channels</h4><ul><li><b>1</b> — police dispatch (all units)</li><li><b>2–10</b> — police tactical channels (one per scene)</li><li><b>EMS</b> — agree one channel at shift start (11 is customary) and announce it to PD dispatch</li><li><b>420 / 421 / 422</b> — gang channels, stay off them</li></ul></div>
+    <div class="card"><h4>Codes used on Nova</h4><ul><li><b>10-31</b> gunshot / crime in progress</li><li><b>10-52</b> person down, EMS needed</li><li><b>10-79</b> deceased</li><li><b>10-99</b> prison break</li><li><b>Code 4</b> scene secure, no further units</li><li><b>Officer down</b> panic — tablet dispatch to every unit</li></ul></div>
+    <div class="card"><h4>Sentencing guideline (minutes)</h4><ul><li>Infraction — 0, fine with <code>/bill</code></li><li>Misdemeanour — 10 to 30</li><li>Felony — 30 to 90</li><li>Capital — 90 to 240 (Lieutenant sign-off above 240)</li></ul></div>
+    <div class="card"><h4>Money that moves automatically</h4><ul><li>Revive fee — $2,000 patient → medic</li><li>Self check-in — $2,000 (only under two EMS on duty)</li><li>Radar fines — $25 / $50 / $250 / $500</li><li>Impound release — fee → police fund</li></ul></div>
+  </div>
+</section><section id="trouble">
+  <h2>When something breaks <span class="k">Before you ticket</span></h2>
+  <div class="tbl-wrap"><table><tr><th>Symptom</th><th>Fix</th></tr><tr><td>No third-eye options on a player</td><td>You are off duty (<kbd>F9</kbd>), too far (step in to 2 m), or looking at their vehicle instead of them.</td></tr><tr><td>Dispatch calls stopped</td><td>Clock out and back in with <kbd>F9</kbd>; if the tablet still shows you off duty, relog.</td></tr><tr><td>"You need handcuffs"</td><td>Buy them at the armoury ($50). They are consumed only if lost, not on use.</td></tr><tr><td>Spike strip will not deploy</td><td>Five already on the ground somewhere — pick yours up with <kbd>E</kbd>. Or you are in a car.</td></tr><tr><td>Suspect will not go in the car</td><td>All rear seats taken, or it is a two-seater. Use a four-door unit.</td></tr><tr><td>A key does nothing</td><td>Rebind it: Settings → Key Bindings → FiveM. The defaults only apply to new players.</td></tr><tr><td>Weapon vanished from inventory</td><td>Open a ticket (<kbd>F5</kbd>) with the weapon name and the time — staff can restore it.</td></tr></table></div>
+  <p>Anything else: <kbd>F5</kbd> opens a ticket to staff. Say what you were doing, who was involved (PermIDs) and the time; a screenshot helps more than a paragraph.</p>
+</section>
+<footer>Nova RP Police Handbook · issued 5 September 2026 · reflects the live server configuration on that date. Department leads may add house rules underneath these; nothing here overrides a staff instruction given in the moment.</footer>
+</main>
+</div>
+</body></html>

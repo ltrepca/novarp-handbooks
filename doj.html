@@ -1,0 +1,163 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nova RP DOJ Handbook</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f5f4fa; --paper:#ffffff; --ink:#1c1930; --ink-2:#4d4866; --ink-3:#7b7695; --line:#dcd9e8; --line-2:#ebe9f3;
+  --accent:#8b2fe2; --accent-soft:#efe4fb;
+  --pd:#2d5fd6; --pd-soft:#e3eafb; --ems:#d63a4a; --ems-soft:#fbe3e6; --doj:#b8860b; --doj-soft:#f8efd4;
+  --kbd-bg:#ffffff; --kbd-line:#c9c5d9; --code-bg:#eeecf5;
+  --warn-bg:#fff5e0; --warn-line:#e2b95a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141220; --paper:#1c1929; --ink:#ece9f6; --ink-2:#b6b1cc; --ink-3:#847f9c; --line:#2f2b42; --line-2:#262236;
+    --accent:#b07cf0; --accent-soft:#2b2140;
+    --pd:#6e95f0; --pd-soft:#1d2540; --ems:#f06a78; --ems-soft:#3a1e24; --doj:#e0b24a; --doj-soft:#3a3018;
+    --kbd-bg:#262236; --kbd-line:#4a4562; --code-bg:#262236;
+    --warn-bg:#332a14; --warn-line:#8a6b1f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141220; --paper:#1c1929; --ink:#ece9f6; --ink-2:#b6b1cc; --ink-3:#847f9c; --line:#2f2b42; --line-2:#262236;
+  --accent:#b07cf0; --accent-soft:#2b2140;
+  --pd:#6e95f0; --pd-soft:#1d2540; --ems:#f06a78; --ems-soft:#3a1e24; --doj:#e0b24a; --doj-soft:#3a3018;
+  --kbd-bg:#262236; --kbd-line:#4a4562; --code-bg:#262236;
+  --warn-bg:#332a14; --warn-line:#8a6b1f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:var(--accent)}
+.wrap{display:grid;grid-template-columns:230px minmax(0,1fr);gap:40px;max-width:1180px;margin:0 auto;padding:32px 24px 80px}
+@media (max-width:860px){.wrap{grid-template-columns:1fr;gap:24px}.toc{position:static!important}}
+.toc{position:sticky;top:20px;align-self:start;font-size:14px}
+.toc .brand{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase;line-height:1;margin:0 0 4px}
+.toc .brand span{color:var(--accent)}
+.toc .sub{color:var(--ink-3);font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 18px}
+.toc ul{list-style:none;margin:0;padding:0}
+.toc li{margin:0}
+.toc a{display:block;color:var(--ink-2);text-decoration:none;padding:5px 0 5px 12px;border-left:2px solid var(--line)}
+.toc a:hover,.toc a:focus{color:var(--ink);border-left-color:var(--accent);outline:none}
+.toc .grp{margin-top:14px;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding-left:12px}
+.toc .grp.pd{color:var(--pd)}.toc .grp.ems{color:var(--ems)}.toc .grp.doj{color:var(--doj)}
+main{min-width:0}
+header.cover{border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:34px}
+.eyebrow{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:56px;line-height:.95;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance}
+.lede{font-size:19px;color:var(--ink-2);max-width:62ch;margin:0}
+.dept-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tag{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:13px;padding:4px 10px;border-radius:3px}
+.tag.pd{background:var(--pd-soft);color:var(--pd)}.tag.ems{background:var(--ems-soft);color:var(--ems)}.tag.doj{background:var(--doj-soft);color:var(--doj)}.tag.all{background:var(--accent-soft);color:var(--accent)}
+section{margin:0 0 54px}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:34px;line-height:1;letter-spacing:.01em;text-transform:uppercase;margin:0 0 6px;padding-top:10px;border-top:3px solid var(--ink);display:flex;align-items:baseline;gap:12px}
+h2 .k{font-size:15px;letter-spacing:.14em;color:var(--ink-3);font-weight:600}
+section.pd h2{border-top-color:var(--pd)}section.ems h2{border-top-color:var(--ems)}section.doj h2{border-top-color:var(--doj)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:22px;letter-spacing:.03em;text-transform:uppercase;margin:28px 0 8px;color:var(--ink)}
+p{margin:0 0 12px;max-width:70ch}
+ul.plain{margin:0 0 12px;padding-left:20px;max-width:70ch}
+ul.plain li{margin:0 0 5px}
+kbd{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;font-weight:500;background:var(--kbd-bg);border:1px solid var(--kbd-line);border-bottom-width:2px;border-radius:4px;padding:1px 6px;color:var(--ink);white-space:nowrap}
+code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:14px;background:var(--code-bg);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.tbl-wrap{overflow-x:auto;margin:0 0 16px}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--ink-3);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line-2);vertical-align:top}
+td:first-child{white-space:nowrap}
+td.num,th.num{font-variant-numeric:tabular-nums;text-align:right}
+ol.sop{counter-reset:s;list-style:none;margin:0 0 16px;padding:0;max-width:72ch}
+ol.sop li{counter-increment:s;position:relative;padding:8px 0 8px 46px;border-bottom:1px solid var(--line-2)}
+ol.sop li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums}
+section.pd ol.sop li::before{color:var(--pd)}section.ems ol.sop li::before{color:var(--ems)}section.doj ol.sop li::before{color:var(--doj)}
+ol.sop b{font-weight:600}
+.callout{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:4px;padding:12px 16px;margin:0 0 16px;max-width:72ch;font-size:15.5px}
+.callout b{font-weight:700}
+.note{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:12px 16px;margin:0 0 16px;max-width:72ch;font-size:15.5px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:0 0 16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:14px 16px}
+.card h4{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:17px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;color:var(--ink-2)}
+.card p,.card ul{font-size:15px;margin:0}
+.card ul{padding-left:18px}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.ladder span{font-size:13.5px;background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:3px 8px;font-variant-numeric:tabular-nums}
+.ladder span.boss{border-color:var(--doj);color:var(--doj)}
+footer{border-top:1px solid var(--line);padding-top:16px;color:var(--ink-3);font-size:13.5px}
+@media print{.toc{display:none}.wrap{grid-template-columns:1fr;padding:0}body{background:#fff;color:#111}section{break-inside:avoid-page}}
+</style></head><body>
+<div class="wrap">
+<nav class="toc" aria-label="Contents">
+  <p class="brand">NOVA <span>RP</span></p>
+  <p class="sub">DOJ Handbook · Sept 2026</p>
+  <ul><li><a href="#basics">The basics</a></li><li><a href="#keys">Keys &amp; commands</a></li><li><a href="#doj-how">Courthouse &amp; legal services</a></li><li><a href="#doj-sop">SOPs</a></li><li><a href="#codes">Reference</a></li><li><a href="#trouble">When something breaks</a></li></ul>
+</nav>
+<main>
+<header class="cover">
+  <p class="eyebrow">Nova RP · Department of Justice</p>
+  <h1>DOJ Handbook &amp; Standard Operating Procedures</h1>
+  <p class="lede">The courthouse, legal services, reading the police file, bail and sentence reductions, warrants and hearings — written for the way Nova is built today.</p>
+  <div class="dept-row"><span class="tag doj">Department of Justice</span></div>
+</header>
+<section id="basics">
+  <h2>Everyone: the basics <span class="k">All departments</span></h2>
+  <p>Three things run every department on Nova: <b>duty</b>, the <b>third eye</b>, and the <b>tablet</b>. Learn these first and the rest of the handbook is detail.</p>
+  <div class="grid2">
+    <div class="card"><h4>Duty</h4><p>Nothing works until you clock in. Third-eye the courthouse point and choose <i>Toggle Duty</i> (or the radial menu's <i>Toggle Duty</i>). Off duty the tablet's work apps stay locked — clock out when you go civilian.</p></div>
+    <div class="card"><h4>Third eye</h4><p>Hold <kbd>Left Alt</kbd> and look at a person, vehicle or object. The courthouse point, doors, vehicles and other people all carry their options here. If an option is missing, you are off duty or too far away.</p></div>
+    <div class="card"><h4>Tablet</h4><p><kbd>F2</kbd> opens the tablet. The Police and Ambulance apps are your MDT: dispatch board, reports, cases, warrants, units, bulletins. Work apps only unlock on duty. <kbd>Left Alt</kbd> toggles the cursor while it is open.</p></div>
+    <div class="card"><h4>Your ID is the PermID</h4><p>When staff or a form asks for an ID, that means the <b>permanent ID</b> (the <code>#</code> number on the HUD). The only places that still take the short session number are the DOJ inmate tools and <code>/jail</code> — those say so.</p></div>
+  </div>
+  <p>Voice is proximity based with three ranges (whisper / normal / shout — cycle with the voice range key; the current range shows on the HUD). Use a <b>radio</b> item for department comms: use it from your inventory (<kbd>`</kbd>), join a channel, then hold the radio push-to-talk key. Channels 1–10 are police, EMS should sit on one agreed channel; see <a href="#codes">codes &amp; channels</a>.</p>
+</section><section id="keys">
+  <h2>Keys &amp; commands <span class="k">Quick reference</span></h2>
+  <div class="tbl-wrap"><table><tr><th>Key</th><th>What it does</th><th>Who</th></tr><tr><td><kbd>F2</kbd></td><td>Tablet (MDT, dispatch, reports)</td><td>PD, EMS, DOJ</td></tr><tr><td><kbd>Left Alt</kbd></td><td>Third eye — all interactions on players, vehicles, objects</td><td>All</td></tr><tr><td><kbd>E</kbd> on a person</td><td>Interaction wheel (ID, frisk, like, put in vehicle…)</td><td>All</td></tr><tr><td><kbd>F6</kbd></td><td>Release an escort / universal cancel</td><td>All</td></tr><tr><td><kbd>`</kbd></td><td>Inventory</td><td>All</td></tr><tr><td><kbd>K</kbd></td><td>Phone</td><td>All</td></tr><tr><td><kbd>F5</kbd></td><td>Open a staff ticket</td><td>All</td></tr><tr><td><code>/bill &lt;amount&gt; [reason]</code></td><td>Issue a fine or bill to the nearest person (lands in their bank Fines tab)</td><td>PD (and lawyers)</td></tr><tr><td><code>/dojlookup</code> · <code>/bail</code> · <code>/reducesentence</code></td><td>Inmate tools (also in the courthouse menu)</td><td>DOJ</td></tr></table></div>
+  <p>Every key above is a FiveM key mapping, so if one clashes with something you already use, rebind it under <i>Settings → Key Bindings → FiveM</i>. Existing players keep their old binding until they change it.</p>
+</section><section class="doj" id="doj-how">
+  <h2>DOJ: courthouse &amp; legal services <span class="k">Department of Justice</span></h2>
+  <p>The DOJ is one unified job with a single ladder: <b>Secretary → Paralegal → Lawyer → Judge → Chief Justice</b>. The Chief Justice is the boss (hiring, society bank). Everything DOJ does starts at the courthouse point, marked on the map with a blue justice blip.</p>
+  <h3>At the courthouse (third eye the point)</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Option</th><th>Who</th><th>What it does</th></tr>
+    <tr><td>Toggle Duty</td><td>All DOJ</td><td>Clocks you in; the MDT and tablet work apps unlock on duty.</td></tr>
+    <tr><td>Legal Services → Look Up an Inmate</td><td>Paralegal +</td><td>Shows how much time a named inmate has left.</td></tr>
+    <tr><td>Legal Services → Post Bail / Release</td><td>Lawyer +</td><td>Releases the inmate from Bolingbroke.</td></tr>
+    <tr><td>Legal Services → Reduce Sentence</td><td>Judge +</td><td>Removes a number of minutes from a sentence.</td></tr>
+    <tr><td>Boss Menu</td><td>Chief Justice</td><td>Hire, promote, society account.</td></tr>
+  </table></div>
+  <p>The same three tools exist as chat commands for when you are away from the courthouse: <code>/dojlookup &lt;id&gt;</code>, <code>/bail &lt;id&gt;</code>, <code>/reducesentence &lt;id&gt; &lt;minutes&gt;</code>.</p>
+  <div class="callout"><b>These tools take the short server ID, not the PermID.</b> Ask the inmate for the number shown on the players list, or have a police unit read it from the MDT's unit/profile view. Entering a PermID here will either do nothing or hit the wrong person.</div>
+  <p>Lawyers also carry a <b>Lawyer Pass</b> item as proof of standing, can issue bills with <code>/bill</code> for their fees, and read every police report, case and warrant in the tablet's Police app — that is the case file you build a defence from.</p>
+</section><section class="doj" id="doj-sop">
+  <h2>DOJ: standard operating procedures <span class="k">Follow in order</span></h2>
+  <h3>Representing an arrested client</h3>
+  <ol class="sop">
+    <li><b>Get the call.</b> Inmates keep their phone. Answer, get their name and server ID, and their side in one sentence.</li>
+    <li><b>Read the file.</b> <kbd>F2</kbd> → Police app → their profile → the report the arresting officer wrote. If there is no report, the arrest is defective — that alone is grounds for bail.</li>
+    <li><b>Check the time.</b> Courthouse → Legal Services → Look Up an Inmate. Compare the minutes to the charges in the report against the sentencing guideline (misdemeanour 10–30, felony 30–90, capital 90–240).</li>
+    <li><b>Talk to the officer.</b> Radio or MDT chat with the arresting officer. Most disputes end here: an over-sentence gets reduced by a Judge, a missing report gets written.</li>
+    <li><b>Act.</b> Lawyer: post bail when the charges are fines-only, the report is missing, or PD agrees. Judge: reduce a sentence that exceeds the guideline for the charges listed. Record what you did and why in a note on the profile.</li>
+  </ol>
+  <h3>Bail guidelines</h3>
+  <div class="tbl-wrap"><table>
+    <tr><th>Situation</th><th>Decision</th></tr>
+    <tr><td>No report in the MDT after 15 minutes</td><td>Bail. Notify the officer's Sergeant.</td></tr>
+    <tr><td>Fine-only offences but jailed anyway</td><td>Bail; the fine stands via <code>/bill</code>.</td></tr>
+    <tr><td>Sentence above guideline for the charges</td><td>Judge reduces to guideline; no bail.</td></tr>
+    <tr><td>Violent felony, complete report, active warrant</td><td>No bail. Client serves; you may argue a reduction on conduct.</td></tr>
+    <tr><td>Client escaped once already</td><td>No bail under any circumstances.</td></tr>
+  </table></div>
+  <h3>Warrants and court</h3>
+  <p>A Judge signs off warrants that PD requests with a case attached; deny anything without one. Hold a hearing at the courthouse for capital charges, a contested felony, or on a Chief Justice's order: prosecuting officer, defence lawyer, judge, ten minutes, ruling entered as a note on the profile and a bulletin if the ruling changes department practice. Judges do not bail their own hearings' defendants; a second DOJ member does.</p>
+</section><section id="codes">
+  <h2>Codes &amp; channels <span class="k">Reference</span></h2>
+  <div class="grid2">
+    <div class="card"><h4>Codes used on Nova</h4><ul><li><b>10-31</b> gunshot / crime in progress</li><li><b>10-52</b> person down, EMS needed</li><li><b>10-79</b> deceased</li><li><b>10-99</b> prison break</li><li><b>Code 4</b> scene secure, no further units</li><li><b>Officer down</b> panic — tablet dispatch to every unit</li></ul></div>
+    <div class="card"><h4>Sentencing guideline (minutes)</h4><ul><li>Infraction — 0, fine with <code>/bill</code></li><li>Misdemeanour — 10 to 30</li><li>Felony — 30 to 90</li><li>Capital — 90 to 240 (Lieutenant sign-off above 240)</li></ul></div>
+    <div class="card"><h4>Money that moves automatically</h4><ul><li>Revive fee — $2,000 patient → medic</li><li>Self check-in — $2,000 (only under two EMS on duty)</li><li>Radar fines — $25 / $50 / $250 / $500</li><li>Impound release — fee → police fund</li></ul></div>
+  </div>
+</section><section id="trouble">
+  <h2>When something breaks <span class="k">Before you ticket</span></h2>
+  <div class="tbl-wrap"><table><tr><th>Symptom</th><th>Fix</th></tr><tr><td>No third-eye options on a player</td><td>You are off duty (<kbd>F9</kbd>), too far (step in to 2 m), or looking at their vehicle instead of them.</td></tr><tr><td>A key does nothing</td><td>Rebind it: Settings → Key Bindings → FiveM. The defaults only apply to new players.</td></tr><tr><td>Bail / lookup says "no player"</td><td>You typed a PermID. DOJ tools want the short server ID.</td></tr><tr><td>Weapon vanished from inventory</td><td>Open a ticket (<kbd>F5</kbd>) with the weapon name and the time — staff can restore it.</td></tr></table></div>
+  <p>Anything else: <kbd>F5</kbd> opens a ticket to staff. Say what you were doing, who was involved (PermIDs) and the time; a screenshot helps more than a paragraph.</p>
+</section>
+<footer>Nova RP DOJ Handbook · issued 5 September 2026 · reflects the live server configuration on that date. Department leads may add house rules underneath these; nothing here overrides a staff instruction given in the moment.</footer>
+</main>
+</div>
+</body></html>

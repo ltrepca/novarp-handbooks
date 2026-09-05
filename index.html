@@ -1,0 +1,95 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Nova RP Handbooks</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#f5f4fa; --paper:#ffffff; --ink:#1c1930; --ink-2:#4d4866; --ink-3:#7b7695; --line:#dcd9e8; --line-2:#ebe9f3;
+  --accent:#8b2fe2; --accent-soft:#efe4fb;
+  --pd:#2d5fd6; --pd-soft:#e3eafb; --ems:#d63a4a; --ems-soft:#fbe3e6; --doj:#b8860b; --doj-soft:#f8efd4;
+  --kbd-bg:#ffffff; --kbd-line:#c9c5d9; --code-bg:#eeecf5;
+  --warn-bg:#fff5e0; --warn-line:#e2b95a;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#141220; --paper:#1c1929; --ink:#ece9f6; --ink-2:#b6b1cc; --ink-3:#847f9c; --line:#2f2b42; --line-2:#262236;
+    --accent:#b07cf0; --accent-soft:#2b2140;
+    --pd:#6e95f0; --pd-soft:#1d2540; --ems:#f06a78; --ems-soft:#3a1e24; --doj:#e0b24a; --doj-soft:#3a3018;
+    --kbd-bg:#262236; --kbd-line:#4a4562; --code-bg:#262236;
+    --warn-bg:#332a14; --warn-line:#8a6b1f;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141220; --paper:#1c1929; --ink:#ece9f6; --ink-2:#b6b1cc; --ink-3:#847f9c; --line:#2f2b42; --line-2:#262236;
+  --accent:#b07cf0; --accent-soft:#2b2140;
+  --pd:#6e95f0; --pd-soft:#1d2540; --ems:#f06a78; --ems-soft:#3a1e24; --doj:#e0b24a; --doj-soft:#3a3018;
+  --kbd-bg:#262236; --kbd-line:#4a4562; --code-bg:#262236;
+  --warn-bg:#332a14; --warn-line:#8a6b1f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.55}
+a{color:var(--accent)}
+.wrap{display:grid;grid-template-columns:230px minmax(0,1fr);gap:40px;max-width:1180px;margin:0 auto;padding:32px 24px 80px}
+@media (max-width:860px){.wrap{grid-template-columns:1fr;gap:24px}.toc{position:static!important}}
+.toc{position:sticky;top:20px;align-self:start;font-size:14px}
+.toc .brand{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:22px;letter-spacing:.02em;text-transform:uppercase;line-height:1;margin:0 0 4px}
+.toc .brand span{color:var(--accent)}
+.toc .sub{color:var(--ink-3);font-size:12px;text-transform:uppercase;letter-spacing:.12em;margin:0 0 18px}
+.toc ul{list-style:none;margin:0;padding:0}
+.toc li{margin:0}
+.toc a{display:block;color:var(--ink-2);text-decoration:none;padding:5px 0 5px 12px;border-left:2px solid var(--line)}
+.toc a:hover,.toc a:focus{color:var(--ink);border-left-color:var(--accent);outline:none}
+.toc .grp{margin-top:14px;font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding-left:12px}
+.toc .grp.pd{color:var(--pd)}.toc .grp.ems{color:var(--ems)}.toc .grp.doj{color:var(--doj)}
+main{min-width:0}
+header.cover{border-bottom:1px solid var(--line);padding-bottom:26px;margin-bottom:34px}
+.eyebrow{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:14px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+h1{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:56px;line-height:.95;letter-spacing:-.01em;margin:0 0 14px;text-wrap:balance}
+.lede{font-size:19px;color:var(--ink-2);max-width:62ch;margin:0}
+.dept-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.tag{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:13px;padding:4px 10px;border-radius:3px}
+.tag.pd{background:var(--pd-soft);color:var(--pd)}.tag.ems{background:var(--ems-soft);color:var(--ems)}.tag.doj{background:var(--doj-soft);color:var(--doj)}.tag.all{background:var(--accent-soft);color:var(--accent)}
+section{margin:0 0 54px}
+h2{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:34px;line-height:1;letter-spacing:.01em;text-transform:uppercase;margin:0 0 6px;padding-top:10px;border-top:3px solid var(--ink);display:flex;align-items:baseline;gap:12px}
+h2 .k{font-size:15px;letter-spacing:.14em;color:var(--ink-3);font-weight:600}
+section.pd h2{border-top-color:var(--pd)}section.ems h2{border-top-color:var(--ems)}section.doj h2{border-top-color:var(--doj)}
+h3{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:22px;letter-spacing:.03em;text-transform:uppercase;margin:28px 0 8px;color:var(--ink)}
+p{margin:0 0 12px;max-width:70ch}
+ul.plain{margin:0 0 12px;padding-left:20px;max-width:70ch}
+ul.plain li{margin:0 0 5px}
+kbd{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:13px;font-weight:500;background:var(--kbd-bg);border:1px solid var(--kbd-line);border-bottom-width:2px;border-radius:4px;padding:1px 6px;color:var(--ink);white-space:nowrap}
+code{font-family:"JetBrains Mono",ui-monospace,monospace;font-size:14px;background:var(--code-bg);padding:1px 6px;border-radius:3px;white-space:nowrap}
+.tbl-wrap{overflow-x:auto;margin:0 0 16px}
+table{border-collapse:collapse;width:100%;font-size:15.5px}
+th{font-family:"Barlow Condensed",sans-serif;font-weight:600;letter-spacing:.1em;text-transform:uppercase;font-size:13px;color:var(--ink-3);text-align:left;padding:8px 10px;border-bottom:2px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid var(--line-2);vertical-align:top}
+td:first-child{white-space:nowrap}
+td.num,th.num{font-variant-numeric:tabular-nums;text-align:right}
+ol.sop{counter-reset:s;list-style:none;margin:0 0 16px;padding:0;max-width:72ch}
+ol.sop li{counter-increment:s;position:relative;padding:8px 0 8px 46px;border-bottom:1px solid var(--line-2)}
+ol.sop li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:8px;font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:20px;color:var(--accent);font-variant-numeric:tabular-nums}
+section.pd ol.sop li::before{color:var(--pd)}section.ems ol.sop li::before{color:var(--ems)}section.doj ol.sop li::before{color:var(--doj)}
+ol.sop b{font-weight:600}
+.callout{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:4px;padding:12px 16px;margin:0 0 16px;max-width:72ch;font-size:15.5px}
+.callout b{font-weight:700}
+.note{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:12px 16px;margin:0 0 16px;max-width:72ch;font-size:15.5px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin:0 0 16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:4px;padding:14px 16px}
+.card h4{font-family:"Barlow Condensed",sans-serif;font-weight:600;font-size:17px;letter-spacing:.08em;text-transform:uppercase;margin:0 0 6px;color:var(--ink-2)}
+.card p,.card ul{font-size:15px;margin:0}
+.card ul{padding-left:18px}
+.ladder{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 14px}
+.ladder span{font-size:13.5px;background:var(--paper);border:1px solid var(--line);border-radius:3px;padding:3px 8px;font-variant-numeric:tabular-nums}
+.ladder span.boss{border-color:var(--doj);color:var(--doj)}
+footer{border-top:1px solid var(--line);padding-top:16px;color:var(--ink-3);font-size:13.5px}
+@media print{.toc{display:none}.wrap{grid-template-columns:1fr;padding:0}body{background:#fff;color:#111}section{break-inside:avoid-page}}
+</style>
+<style>.hub{max-width:900px;margin:0 auto;padding:48px 24px}.hub .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:28px}.hub a.card{display:block;text-decoration:none;color:var(--ink);border-top:4px solid var(--accent)}.hub a.card.pd{border-top-color:var(--pd)}.hub a.card.ems{border-top-color:var(--ems)}.hub a.card.doj{border-top-color:var(--doj)}.hub a.card h3{margin:6px 0 6px}.hub a.card p{font-size:15px;color:var(--ink-2)}.hub a.card .pdf{display:inline-block;margin-top:10px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-family:"Barlow Condensed",sans-serif;font-weight:600;color:var(--accent)}</style>
+</head><body><div class="hub">
+<p class="eyebrow">Nova RP · Emergency Services &amp; Justice</p>
+<h1>Department Handbooks</h1>
+<p class="lede">How-to guides and standard operating procedures for the three whitelisted departments on Nova RP. Read online or download the PDF.</p>
+<div class="cards">
+<a class="card pd" href="police.html"><h3>Police</h3><p>LSPD · BCSO · SASP — shifts, armoury, garages, street tools, arrests, pursuits, MDT rights.</p><span class="pdf">PDF ↓</span></a>
+<a class="card ems" href="ems.html"><h3>EMS</h3><p>Pillbox &amp; Paleto — duty, supplies, calls, treating and reviving, scene safety, ranks.</p><span class="pdf">PDF ↓</span></a>
+<a class="card doj" href="doj.html"><h3>DOJ</h3><p>Courthouse, legal services, bail and sentence reductions, representation, warrants and hearings.</p><span class="pdf">PDF ↓</span></a>
+</div>
+<p style="margin-top:28px;font-size:14px;color:var(--ink-3)">PDF copies: <a href="Nova%20RP%20-%20Police%20Handbook.pdf">Police</a> · <a href="Nova%20RP%20-%20EMS%20Handbook.pdf">EMS</a> · <a href="Nova%20RP%20-%20DOJ%20Handbook.pdf">DOJ</a></p>
+</div></body></html>
